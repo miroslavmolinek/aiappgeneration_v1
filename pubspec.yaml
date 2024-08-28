@@ -1,25 +1,18 @@
-workflows:
-  android-workflow:
-    name: Android Workflow
-    max_build_duration: 120
-    instance_type: mac_mini_m1
-    environment:
-      flutter: stable
-      android_signing:
-        - keystore_reference: "your_keystore_reference"
-    scripts:
-      - name: Set Android SDK location
-        script: |
-          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
-      - name: Build Android release
-        script: |
-          ./gradlew assembleRelease
-    artifacts:
-      - app/build/outputs/**/*.apk
-    publishing:
-      email:
-        recipients:
-          - your_email@example.com
-        notify:
-          success: true
-          failure: true
+name: honeywell_quiz_app
+description: A simple quiz app for Honeywell.
+
+publish_to: 'none' # Remove this line if you want to publish to pub.dev
+
+environment:
+ sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+ flutter:
+   sdk: flutter
+
+dev_dependencies:
+ flutter_test:
+   sdk: flutter
+
+flutter:
+ uses-material-design: true
