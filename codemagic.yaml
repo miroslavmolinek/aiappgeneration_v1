@@ -6,7 +6,7 @@ workflows:
     environment:
       flutter: stable
       android_signing:
-        - keystore: "unique_keystore_reference_miroslav"
+        - keystore: "miroslav"
     scripts:
       - name: Set Android SDK location
         script: |
