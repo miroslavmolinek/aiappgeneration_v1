@@ -4,15 +4,15 @@ description: A simple quiz app for Honeywell.
 publish_to: 'none' # Remove this line if you want to publish to pub.dev
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+ sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  flutter:
+ flutter:
    sdk: flutter
 
 dev_dependencies:
-  flutter_test:
+ flutter_test:
    sdk: flutter
 
 flutter:
-  uses-material-design: true
+ uses-material-design: true
